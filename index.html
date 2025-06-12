@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Revision Guide KS3 & 4</title>
+    <link rel="stylesheet" href="styles.css" />
+    <style>
+      .game-button {
+        border: none;
+        background: none;
+        margin: 10px;
+        padding: 0;
+        cursor: pointer;
+      }
+
+      .game-button img {
+        width: 150px;
+        height: auto;
+        border-radius: 8px;
+        transition: transform 0.2s;
+      }
+
+      .game-button img:hover {
+        transform: scale(1.05);
+      }
+
+      .logout-button {
+        margin: 20px;
+        padding: 10px 20px;
+        font-size: 16px;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <script>
+      if (localStorage.getItem("authenticated") !== "true") {
+        window.location.href = "login.html";
+      }
+    </script>
+
+    <h1>Study Harder!</h1>
+
+    <!-- Logout -->
+    <button class="logout-button" onclick="logout()">Logout</button>
+    <script>
+      function logout() {
+        localStorage.removeItem("authenticated");
+        window.location.href = "login.html";
+      }
+    </script>
+
+    <!-- Game 1 -->
+    <button
+      class="game-button"
+      onclick="window.location.href='Games/obbybutyouronabike.html'"
+    >
+      <img
+        src="https://tr.rbxcdn.com/180DAY-8442a42292cbd8d0093663c1b1aad4a2/512/512/Image/Webp/noFilter"
+        alt="Obby But Your On A Bike"
+      />
+    </button>
+
+    <!-- Game 2–10 -->
+    <button
+      class="game-button"
+      onclick="window.location.href='Games/amongus.html'"
+    >
+      <img
+        src="https://raw.githubusercontent.com/duckmath/icons/refs/heads/main/amongus.webp"
+        alt="Among Us"
+      />
+    </button>
+
+    <button
+      class="game-button"
+      onclick="window.location.href='Games/1v1lol.html'"
+    >
+      <img
+        src="https://raw.githubusercontent.com/duckmath/icons/refs/heads/main/1v1.lol-old.webp"
+        alt="1v1lol"
+      />
+    </button>
+
+    <button
+      class="game-button"
+      onclick="window.location.href='Games/krunker.html'"
+    >
+      <img
+        src="https://raw.githubusercontent.com/duckmath/icons/refs/heads/main/krunker.io.webp"
+        alt="Krunker"
+      />
+    </button>
+
+    <button
+      class="game-button"
+      onclick="window.location.href='Games/crazycattle3d.html'"
+    >
+      <img
+        src="https://crazycattle3dgithub.io/data/image/crazy-cattle-3d-online.png"
+        alt="CRAZYCATTLE3D"
+      />
+    </button>
+
+    <button
+      class="game-button"
+      onclick="window.location.href='Games/backrooms.html'"
+    >
+      <img
+        src="https://raw.githubusercontent.com/duckmath/icons/refs/heads/main/backrooms1.webp"
+        alt="Backrooms"
+      />
+    </button>
+
+    <button
+      class="game-button"
+      onclick="window.location.href='Games/flappybird.html'"
+    >
+      <img
+        src="https://upload.wikimedia.org/wikipedia/en/thumb/0/0a/Flappy_Bird_icon.png/250px-Flappy_Bird_icon.png"
+        alt="Flappy Bird"
+      />
+    </button>
+
+    <button
+      class="game-button"
+      onclick="window.location.href='Games/motox3m.html'"
+    >
+      <img
+        src="https://raw.githubusercontent.com/duckmath/icons/refs/heads/main/motox3m.webp"
+        alt="Moto X3M"
+      />
+    </button>
+
+    <button
+      class="game-button"
+      onclick="window.location.href='Games/cookieclicker.html'"
+    >
+      <img
+        src="https://raw.githubusercontent.com/duckmath/icons/refs/heads/main/cookieclicker.webp"
+        alt="Cookie Clicker"
+      />
+    </button>
+
+    <button
+      class="game-button"
+      onclick="window.location.href='Games/eggycar.html'"
+    >
+      <img
+        src="https://raw.githubusercontent.com/duckmath/icons/refs/heads/main/eggy-car.webp"
+        alt="Eggy Car"
+      />
+    </button>
+  </body>
+</html>

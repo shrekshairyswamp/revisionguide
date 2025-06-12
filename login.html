@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        text-align: center;
+        padding-top: 100px;
+      }
+
+      input {
+        display: block;
+        margin: 10px auto;
+        padding: 8px;
+        width: 200px;
+      }
+
+      button {
+        padding: 8px 16px;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>Login to Access 5000+ Student Exam Guides!</h2>
+    <form id="loginForm">
+      <input type="text" id="username" placeholder="Username" required />
+      <input type="password" id="password" placeholder="Password" required />
+      <button type="submit">Login</button>
+    </form>
+
+    <script>
+      // List of valid login accounts
+      const validAccounts = [
+        { username: "personwea2", password: "gilbert1234" },
+        { username: "admin", password: "gilbert1234" },
+      ];
+
+      document
+        .getElementById("loginForm")
+        .addEventListener("submit", function (e) {
+          e.preventDefault();
+          const username = document.getElementById("username").value;
+          const password = document.getElementById("password").value;
+
+          // Check if the entered credentials match any valid account
+          const match = validAccounts.find(
+            (account) =>
+              account.username === username && account.password === password
+          );
+
+          if (match) {
+            localStorage.setItem("authenticated", "true");
+            window.location.href = "index.html";
+          } else {
+            alert("Invalid login, please try again!");
+          }
+        });
+    </script>
+  </body>
+</html>
